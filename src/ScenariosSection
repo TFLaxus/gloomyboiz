@@ -1,0 +1,19 @@
+import React from 'react';
+import scenariosData from './scenarioData';
+
+const ScenariosSection = () => {
+  return (
+    <div>
+      <h2>Scenarios Section</h2>
+      <div className="scenario-buttons">
+        {scenariosData.map((scenario) => (
+          <button key={scenario.id} onClick={() => handleButtonClick(scenario)}>
+            {scenario.title}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ScenariosSection;
